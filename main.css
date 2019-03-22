@@ -1,0 +1,17 @@
+#sourcererLogo {
+    width: 45%;
+    height: auto;
+    margin-top: 25%;
+}
+
+nav div .btn-floating {
+    margin: 1em 0.5em 1em 0.5em
+}
+
+.card-reveal p {
+    text-align: justify;
+  } 
+
+.parallax-container {
+height: 800px;
+}
