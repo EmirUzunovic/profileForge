@@ -7,11 +7,35 @@
 nav div .btn-floating {
     margin: 1em 0.5em 1em 0.5em
 }
-
+#hiromiage{
+  width: 100%;
+  height: auto;
+}
 .card-reveal p {
     text-align: justify;
   } 
 
 .parallax-container {
-height: 800px;
+height: 50vw
+}
+
+.projectBadges span {
+ margin: 0.5em;
+}
+
+
+
+.footer-contacts a{
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+}
+
+.footer-contacts a:hover,
+.footer-contacts a:active {
+  color: #42A5F5;
+}
+
+#sourcererLogoFooter {
+  width: 12px;
 }
