@@ -1,22 +1,44 @@
+/* nav style */
 #sourcererLogo {
     width: 45%;
     height: auto;
     margin-top: 25%;
 }
-
 nav div .btn-floating {
     margin: 1em 0.5em 1em 0.5em
 }
-#hiromiage{
+
+
+/*Stil za hero image div*/
+#heroimage{
   width: 100%;
-  height: auto;
+  margin-top: 70px;
 }
+
+#heroimage img {
+  width: 100%;
+}
+/* fillter buttons  */
+.filter-buttons div {
+  margin-top: 1em;
+}
+
+/* projectCard style */
 .card-reveal p {
     text-align: justify;
   } 
 
-.parallax-container {
-height: 50vw
+.projectCard {
+    display: none;
+  }
+
+.show {
+  display: block;
+}
+
+.card-image img {
+  max-width: 259,36px;
+  max-height: 120px;
 }
 
 .projectBadges span {
@@ -24,7 +46,12 @@ height: 50vw
 }
 
 
+/* parallay style */
+.parallax-container {
+height: 20vw
+}
 
+/* footer style */
 .footer-contacts a{
   text-decoration: none;
   font-size: 14px;

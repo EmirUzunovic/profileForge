@@ -22,7 +22,8 @@
 
 <body>
 
-<!--Navigation links, menue ect...-->
+<!--Navigation links, menu-->
+
   <nav class="nav-wrapper grey darken-1">
     <div class="container">
         <a href ="/" class="brand-logo">Jullo</a>
@@ -48,83 +49,117 @@
     </div>
   </nav>
 
-<!--Parallax image-->
-  <div class="parallax-container" >
-      <div class="parallax"><img id="hiromiage" src="images/paralaxImages/pexels-photo-205316.png"></div>
-  </div>
+  <div id="heroimage">
+      <img src="images/paralaxImages/pexels-photo-205316.png">
+  </div><!--End of HeroImage-->
 
+  <div class="container row center-align filter-buttons">
+    
+      <div class="col s4 m2" data-framework = "javascript">
+        <button class ="btn-large btn-floating blue lighten-1 waves-effect waves-dark z-depth-1" onclick="filterSelection('javascript')"><i class="fab fa-js-square"></i></button>
+      </div>
 
-<!--Project Cards-->
-  <span style="font-size: 3em; color: Tomato;">
-   <i class="fab fa-bootstrap"></i>
-  </span>
+      <div class="col s4 m2" data-framework = "react">
+        <button class ="btn-large btn-floating blue lighten-1 waves-effect waves-dark z-depth-1" onclick="filterSelection('react')"><i class="fab fa-react"></i></button>
+      </div>
+
+      <div class="col s4 m2" data-framework = "bootstrap">
+        <button class ="btn-large btn btn-floating blue lighten-1 waves-effect waves-dark z-depth-1" onclick="filterSelection('bootstrap')">B</button>
+      </div>
+
+      <div class="col s4 m2" data-framework = "css">
+        <button class ="btn-large btn-floating blue lighten-1 waves-effect waves-dark z-depth-1" onclick="filterSelection('css')"><i class="fab fa-css3-alt" ></i></button>
+      </div>
+
+      <div class="col s4 m2" data-framework = "html">
+        <button class ="btn-large btn-floating blue lighten-1 waves-effect waves-dark z-depth-1" onclick="filterSelection('html')"><i class= "fab fa-html5"></i></button>
+      </div>
+
+      <div class="col s4 m2" data-framework = "all">
+        <button class ="btn-large btn-floating blue lighten-1 waves-effect waves-dark z-depth-1" onclick="filterSelection('all')">ALL</button>
+      </div>
+
+  </div><!--End of filter-buttons-->
   
-  <a href ="#" class ="btn-floating btn-small right center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-js-square"></i></a>
-  <a href ="#" class ="btn-floating btn-small right center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-react"></i></a>
-  <a href ="#" class ="btn-floating btn-small right center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-css3-alt"></i></a>
-  <a href ="#" class ="btn-floating btn-small right center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-github"></i></a>
-  <a href ="#" class ="btn-floating btn-small right center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-codepen"></i></a>
-  <a href ="#" class ="btn-floating btn-small right center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-free-code-camp"></i></a>
-  <a href ="#" class ="btn-floating btn-small right center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-skype"></i></a>
-  <a href ="#" class ="btn-floating btn-small right center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="text-white fab fa-bootstrap"></i></a>
-  <a href ="#" class ="btn-floating btn-small right center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-html5"></i></a>
-
-  
-
 <!-- Section: Projects -->
-<section id="projects" class="section">  
-  <div class="container row">
-    <div class= "col s12 m6 l4 xl4">
+<section id="projects" class="section container ">  
+  <h1 class="filterDiv">My Projects</h1>
+
+  <div class="row">
+    <div class= "projectCard col s12 m6 l4 xl4 html css javascript">
       <div class="card hoverable">
 
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="/images/PortfolioProject imgs/Drummachine.jpg">
+          <img class="activator" src="images/PortfolioProject imgs/RockPaperScissors.jpg">
         </div>
 
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Drum Machine React<i class="material-icons right">more_vert</i></span>
-          <span><a href="https://codepen.io/EmirU/full/pqOpdq" target="_blank" class ="btn-floating btn-small center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-codepen"></i></a></a></span>
+          <span class="card-title activator grey-text text-darken-4">Rock paper scissors<i class="material-icons right">more_vert</i></span>
+          <span><a href="https://codepen.io/EmirU/full/YBzJNZ" target="_blank" class ="btn-floating btn-small center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-codepen"></i></a></a></span>
         </div>
 
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Drum Machine React<i class="material-icons right">close</i></span>
-          <p>As a part of Free Code Camp front end libraries projects was to build a drum machine. This project is using keydown event listener, a JS higher order function map() to loop through object containing keydown, keyCodes and links to audio source for html audio tag to reproduce a specific sound. To prevent all kinds of bugs, add and remove event listener was placed on life cycles hooks DidMount and WillUnmount.</p>
-          <div class="row projectBadges ">
-            <span class ="btn-floating btn-small right grey waves-effect waves-dark z-depth-0"><i class="fab fa-html5"></i></span>
-            <span href ="#" class ="btn-floating btn-small right grey waves-effect waves-dark z-depth-0"><i class="fab fa-css3-alt"></i></span>
-            <span href ="#" class ="btn-floating btn-small right grey waves-effect waves-dark z-depth-0"><i class="fab fa-js-square"></i></span>
-            <span href ="#" class ="btn-floating btn-small right grey waves-effect waves-dark z-depth-0"><i class="fab fa-react"></i></span>
+          <span class="card-title grey-text text-darken-4">Rock paper scissors<i class="material-icons right">close</i></span>
+          <p>Rock paper scissors is a tutorial project. This project is using JS math() methods, math floor and random, to generate random computer choice. Switch loop is comparing between user and computer choice, and depending of the outcome, result component is refreshed, and classlist.add and classlist.remove is used to make different color glow on buttons.</p>
+          <div class="row projectBadges center-align">
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-html5"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-css3-alt"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-js-square"></i></span>
           </div>
         </div>
       </div>
     </div>
 
-    <div class= "col s12 m6 l4 xl4">
+    <div class= "projectCard col s12 m6 l4 xl4 html css javascript">
       <div class="card hoverable">
 
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="/images/PortfolioProject imgs/Drummachine.jpg">
+          <img class="activator" src="images/PortfolioProject imgs/MemoryCardGame.jpg">
         </div>
 
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Drum Machine React<i class="material-icons right">more_vert</i></span>
-          <span><a href="https://codepen.io/EmirU/full/pqOpdq" target="_blank" class ="btn-floating btn-small center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-codepen"></i></a></a></span>
+          <span class="card-title activator grey-text text-darken-4">Memory Card Game<i class="material-icons right">more_vert</i></span>
+          <span><a href="https://codepen.io/EmirU/full/YBzJNZ" target="_blank" class ="btn-floating btn-small center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-codepen"></i></a></a></span>
         </div>
 
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Drum Machine React<i class="material-icons right">close</i></span>
-          <p>As a part of Free Code Camp front end libraries projects was to build a drum machine. This project is using keydown event listener, a JS higher order function map() to loop through object containing keydown, keyCodes and links to audio source for html audio tag to reproduce a specific sound. To prevent all kinds of bugs, add and remove event listener was placed on life cycles hooks DidMount and WillUnmount.</p>
-          <div class="row projectBadges ">
-            <span class ="btn-floating btn-small right grey waves-effect waves-dark z-depth-0"><i class="fab fa-html5"></i></span>
-            <span href ="#" class ="btn-floating btn-small right grey waves-effect waves-dark z-depth-0"><i class="fab fa-css3-alt"></i></span>
-            <span href ="#" class ="btn-floating btn-small right grey waves-effect waves-dark z-depth-0"><i class="fab fa-js-square"></i></span>
-            <span href ="#" class ="btn-floating btn-small right grey waves-effect waves-dark z-depth-0"><i class="fab fa-react"></i></span>
+          <span class="card-title grey-text text-darken-4">Memory Card Game<i class="material-icons right">close</i></span>
+          <p>Memory Card Game - is a JavaScript Tutorial. This project is selecting elements in the DOM with querySelector, using forEach() method to iterate through list, adding and removing an element classes and event listeners, using css grid to position an items, and using perspective and backface transition to simulate card flip. To shuffle cards for every new game, math floor and math random was used.</p>
+          <div class="row projectBadges center-align">
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-html5"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-css3-alt"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-js-square"></i></span>
           </div>
         </div>
       </div>
     </div>
 
-    <div class= "col s12 m6 l4 xl4">
+    <div class= "projectCard col s12 m6 l4 xl4 html css javascript react">
+      <div class="card hoverable">
+
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="images/PortfolioProject imgs/Markdownpreview.jpg">
+        </div>
+
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Markdown preview<i class="material-icons right">more_vert</i></span>
+          <span><a href="https://codepen.io/EmirU/full/rPNwww" target="_blank" class ="btn-floating btn-small center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-codepen"></i></a></a></span>
+        </div>
+
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Markdown preview<i class="material-icons right">close</i></span>
+          <p>As a part of Free Code Camp front end libraries projects was to build a drum machine. This project is using keydown event listener, a JS higher order function map() to loop through object containing keydown, keyCodes and links to audio source for html audio tag to reproduce a specific sound. To prevent all kinds of bugs, add and remove event listener was placed on life cycles hooks DidMount and WillUnmount.</p>
+          <div class="row projectBadges center-align">
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-html5"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-css3-alt"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-js-square"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-react"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class= "projectCard col s12 m6 l4 xl4 javascript">
       <div class="card hoverable">
 
         <div class="card-image waves-effect waves-block waves-light">
@@ -139,20 +174,115 @@
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Drum Machine React<i class="material-icons right">close</i></span>
           <p>As a part of Free Code Camp front end libraries projects was to build a drum machine. This project is using keydown event listener, a JS higher order function map() to loop through object containing keydown, keyCodes and links to audio source for html audio tag to reproduce a specific sound. To prevent all kinds of bugs, add and remove event listener was placed on life cycles hooks DidMount and WillUnmount.</p>
-          <div class="row projectBadges ">
-            <span class ="btn-floating btn-small right grey waves-effect waves-dark z-depth-0"><i class="fab fa-html5"></i></span>
-            <span href ="#" class ="btn-floating btn-small right grey waves-effect waves-dark z-depth-0"><i class="fab fa-css3-alt"></i></span>
-            <span href ="#" class ="btn-floating btn-small right grey waves-effect waves-dark z-depth-0"><i class="fab fa-js-square"></i></span>
-            <span href ="#" class ="btn-floating btn-small right grey waves-effect waves-dark z-depth-0"><i class="fab fa-react"></i></span>
+          <div class="row projectBadges center-align">
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-html5"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-css3-alt"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-js-square"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-react"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class= "projectCard col s12 m6 l4 xl4 html css javascript react">
+      <div class="card hoverable">
+  
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="images/PortfolioProject imgs//RandomQuoteMachine.jpg">
+        </div>
+  
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Random quote Machine<i class="material-icons right">more_vert</i></span>
+          <span><a href="https://codepen.io/EmirU/full/daPeXa" target="_blank" class ="btn-floating btn-small center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-codepen"></i></a></a></span>
+        </div>
+  
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Random quote Machine<i class="material-icons right">close</i></span>
+          <p>As a part of Free Code Camp front end libraries projects this was a build a random quote machine project. This project is using Fetch from remote API for making requests and fetching quotes. React.js was also used. Problem that occure was with consistant refreshing of DOM element on state change. To resolve the problem react.js components life cycle hooks was used.</p>
+          <div class="row projectBadges center-align">
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-html5"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-css3-alt"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-js-square"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-react"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class= "projectCard col s12 m6 l4 xl4 html css">
+      <div class="card hoverable">
+  
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="images/PortfolioProject imgs/OriginalTrombones.jpg">
+        </div>
+  
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Product landing page Trombones<i class="material-icons right">more_vert</i></span>
+          <span><a href="https://codepen.io/EmirU/full/VBprbV/" target="_blank" class ="btn-floating btn-small center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-codepen"></i></a></a></span>
+        </div>
+  
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Product landing page Trombones<i class="material-icons right">close</i></span>
+          <p>As a part of Free Code Camp front end libraries projects was to build a drum machine. This project is using keydown event listener, a JS higher order function map() to loop through object containing keydown, keyCodes and links to audio source for html audio tag to reproduce a specific sound. To prevent all kinds of bugs, add and remove event listener was placed on life cycles hooks DidMount and WillUnmount.</p>
+          <div class="row projectBadges center-align">
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-html5"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-css3-alt"></i></span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class= "projectCard col s12 m6 l4 xl4 html css">
+        <div class="card hoverable">
+    
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="images/PortfolioProject imgs/TechnicalDocumentation.jpg">
+          </div>
+    
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Technical Documentation<i class="material-icons right">more_vert</i></span>
+            <span><a href="https://codepen.io/EmirU/full/pZebJy" target="_blank" class ="btn-floating btn-small center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-codepen"></i></a></a></span>
+          </div>
+    
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Technical Documentation<i class="material-icons right">close</i></span>
+            <p>As a part of Free Code Camp responsive web design projects the task was to build a technical documentation page using simple html and css. Goal for this page is to make navbar element which should navigate to corresponding section, and on regular sized devices (laptops, desktops), the navbar should be shown on the left side of the screen and should always be visible to the user.</p>
+            <div class="row projectBadges center-align">
+              <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-html5"></i></span>
+              <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-css3-alt"></i></span>
+              <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-js-square"></i></span>
+              <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-react"></i></span>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class= "projectCard col s12 m6 l4 xl4 html css">
+      <div class="card hoverable">
+
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="images/PortfolioProject imgs/TributePage.jpg">
+        </div>
+
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Carl Edward Sagan Tribute page<i class="material-icons right">more_vert</i></span>
+          <span><a href="https://codepen.io/EmirU/full/KBNKpq" target="_blank" class ="btn-floating btn-small center-align blue lighten-1 waves-effect waves-dark z-depth-0"><i class="fab fa-codepen"></i></a></a></span>
+        </div>
+
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Carl Edward Sagan Tribute page<i class="material-icons right">close</i></span>
+          <p>As a part of Free Code Camp responsive web design projects, Tribute Page project is using simple html and css to make blog website template.</p>
+          <div class="row projectBadges center-align">
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-html5"></i></span>
+            <span class ="btn-floating btn-small grey waves-effect waves-dark z-depth-0"><i class="fab fa-css3-alt"></i></span>
           </div>
         </div>
       </div>
     </div>
 
   </div>
-
 </section>
- 
 
   <!-- parallax -->
   <div class="parallax-container">
@@ -172,12 +302,15 @@
       <div class="col s12 l6 offset-l2">
         <!-- tabs -->
         <ul class="tabs">
+
           <li class="tab col s6">
             <a href="#photography" class="active indigo-text text-darken-4">Photography</a>
           </li>
+
           <li class="tab col s6">
             <a href="#editing" class="indigo-text text-darken-4">Editing</a>
           </li>
+          
         </ul>
         <div id="photography" class="col s12">
             <p class="flow-text indigo-text text-darken-4">Photography</p>
