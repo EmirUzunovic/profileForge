@@ -14,24 +14,25 @@ nav div .btn-floating {
   width: 100%;
   margin-top: 70px;
 }
-
 #heroimage img {
   width: 100%;
 }
+
 /* fillter buttons  */
 .filter-buttons div {
   margin-top: 1em;
+}
+#bootstrapIcon{
+  font-size: 2em;
 }
 
 /* projectCard style */
 .card-reveal p {
     text-align: justify;
   } 
-
 .projectCard {
     display: none;
   }
-
 .show {
   display: block;
 }
@@ -47,14 +48,34 @@ nav div .btn-floating {
   object-fit: none;
 }
 
+/*project badges style*/
 .projectBadges span {
  margin: 0.5em;
+}
+
+.tabs .tab a {
+  color:black;
+}
+
+.tabs .tab a:hover, 
+.tabs .tab a.active {
+  color: #42A5F5;
+}
+
+.tabs .indicator {
+  background-color: #42A5F5;
+  color: #42A5F5;
+}
+
+.tabs .tab a:focus, 
+.tabs .tab a:focus.active {
+  background-color: rgba(66,165,245,0.01);
 }
 
 
 /* parallay style */
 .parallax-container {
-height: 20vw
+height: 15vw
 }
 
 /* footer style */
@@ -71,4 +92,11 @@ height: 20vw
 
 #sourcererLogoFooter {
   width: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* parallay style */
+.parallax-container {
+  height: 30vw
+  }
 }

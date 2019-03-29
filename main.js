@@ -6,18 +6,20 @@ document.addEventListener('DOMContentLoaded', function() {
     var paralaxInstances = M.Parallax.init(paralax);
     var tabs = document.querySelectorAll('.tabs')
     var TabsInstance = M.Tabs.init(tabs);
+    var scrollSpay = document.querySelectorAll('.scrollspy');
+    var scrollSpayInstances = M.ScrollSpy.init(scrollSpay);
   });
 
 
 filterSelection("all");
 
-function filterSelection(selcection){
+function filterSelection(selection){
     let i;
     let projects = document.querySelectorAll('.projectCard');
-    if (selcection == "all") selcection = "";
+    if (selection == "all") selection = "";
     for (i = 0 ; i < projects.length; i++){
         w3RemoveClass(projects[i], "show");
-        if(projects[i].className.indexOf(selcection) > -1) w3AddClass(projects[i], "show");
+        if(projects[i].className.indexOf(selection) > -1) w3AddClass(projects[i], "show");
     }
 }
 
