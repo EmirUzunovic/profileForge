@@ -36,9 +36,15 @@ nav div .btn-floating {
   display: block;
 }
 
+/* card image size problem fixed */
 .card-image img {
-  max-width: 259,36px;
-  max-height: 120px;
+  min-height: 200px;
+  max-height: 200px;
+  object-fit: cover;
+}
+.card-image img.materialized.active{
+  max-height: none;
+  object-fit: none;
 }
 
 .projectBadges span {
