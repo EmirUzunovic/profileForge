@@ -8,8 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var TabsInstance = M.Tabs.init(tabs);
     var scrollSpay = document.querySelectorAll('.scrollspy');
     var scrollSpayInstances = M.ScrollSpy.init(scrollSpay);
+    var tooltip = document.querySelectorAll('.tooltipped');
+    var tooltipInstance = M.Tooltip.init(tooltip);
   });
-
+  
 
 filterSelection("all");
 
