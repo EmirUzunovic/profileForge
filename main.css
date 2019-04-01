@@ -100,3 +100,18 @@ height: 15vw
   height: 30vw
   }
 }
+
+@media only screen and (max-width: 460px) {
+  /* parallay style */
+.parallax-container {
+  height: 40vw
+  }
+
+
+  /*hiro image*/
+  #heroimage img {
+    position: relative;
+    width: 180%;
+    left:-40%;
+  }
+}
