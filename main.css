@@ -1,3 +1,8 @@
+p {
+  text-align: justify;
+}
+
+
 /* nav style */
 #sourcererLogo {
     width: 45%;
@@ -9,7 +14,7 @@ nav div .btn-floating {
 }
 
 
-/*Stil za hero image div*/
+/*Hiro image style*/
 #heroimage{
   width: 100%;
   margin-top: 70px;
@@ -17,6 +22,30 @@ nav div .btn-floating {
 #heroimage img {
   width: 100%;
 }
+
+
+/*Tabs style*/
+
+.tabs .tab a {
+  color:black;
+}
+
+.tabs .tab a:hover, 
+.tabs .tab a.active {
+  color: #42A5F5;
+}
+
+.tabs .indicator {
+  background-color: #42A5F5;
+  color: #42A5F5;
+}
+
+.tabs .tab a:focus, 
+.tabs .tab a:focus.active {
+  background-color: rgba(66,165,245,0.01);
+}
+
+
 
 /* fillter buttons  */
 .filter-buttons div {
@@ -51,25 +80,6 @@ nav div .btn-floating {
 /*project badges style*/
 .projectBadges span {
  margin: 0.5em;
-}
-
-.tabs .tab a {
-  color:black;
-}
-
-.tabs .tab a:hover, 
-.tabs .tab a.active {
-  color: #42A5F5;
-}
-
-.tabs .indicator {
-  background-color: #42A5F5;
-  color: #42A5F5;
-}
-
-.tabs .tab a:focus, 
-.tabs .tab a:focus.active {
-  background-color: rgba(66,165,245,0.01);
 }
 
 
