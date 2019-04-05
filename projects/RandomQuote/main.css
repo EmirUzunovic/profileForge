@@ -1,0 +1,13 @@
+#quote-box {
+    margin: auto auto;
+}
+ #buttons{
+     margin-top: 25px;
+ }
+ body {
+     height: 100vh;
+    display: flex;
+ }
+ .blockquote-footer{
+     font-size: 20px;
+ }
