@@ -36,7 +36,7 @@ header h1 {
     /*to completely remove out of view*/
     text-indent: -10000px;
     /*instead of text, logo picture is inserted*/
-    background: url(/images/logo.png) no-repeat;
+    background: url(images/logo.png) no-repeat;
     width: 130px;
     float: left;
 }
