@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Markdown</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+      <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+      <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.4.0/marked.min.js"></script>    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body>
+  
+  <script type="text/babel">
+    
+   //placeholder for initial load
+let placeholder = `
+
+# Heading number 1
+## Heading number 2
+### Heading number 3
+#### ect.
+
+<!--Italic-->
+*This text* is italic
+
+_This text_ is italic
+
+<!--Strong-->
+**This text** is strong
+
+__This text__   is strong
+
+<!--Strikethroug-->
+
+~~This text~~ \n\nis strikethroug
+
+<!--Horizontal rule-->
+
+---
+___
+
+<!--Blockquote-->
+>This is a quote
+
+<!--Links-->
+[Emir Uzunovic](http://www.hobbydev.com.ba/)
+
+[Emir Uzunovic](http://www.hobbydev.com.ba/ "see my portfolio")
+
+<!--UL-->
+* item1
+* item 2
+    * nested 1
+    * nested 2
+
+<!--OL-->
+1. item 1
+1. item 2
+1. item 3
+1. item 4
+
+<!--Inline Code Block-->
+\`<p>This is a paragraph</p>\`
+
+<!--Image-->
+![Markdown Logo](https://markdown-here.com/img/icon256.png)
+
+<!--GitHub Markdown-->
+<!--Code Block-->
+\`\`\`bash
+npm instal 
+npm start
+\`\`\`
+
+\`\`\`javascrip
+function add(num1, num2){
+    return num1 + num2;
+}
+\`\`\`
+
+\`\`\`python
+    def add(num1, num2):
+    return num1 + num2
+\`\`\`
+
+<!--Tables-->
+| Name     | Email          |
+| -------- | -------------- |
+| John Doe | john@gmail.com |
+| Jane Doe | jane@gmail.com |
+
+<!-- Task List -->
+* [x] Task 1
+* [x] Task 2
+* [ ] Task 3
+ `;
+class Editor extends React.Component {
+  render(){
+    
+    return(<div>
+          <textarea id="inputtext" className= "main"  onChange= {this.props.appstatechange} value= {this.props.appinput} placeholder="Write your own markdown text"></textarea>
+      </div>);
+  }
+}
+
+class Previewer extends React.Component{
+  render(){
+    
+    return(
+      
+      <div className= "main" dangerouslySetInnerHTML={{__html: marked(this.props.appinput, { renderer: renderer })}}>
+     
+    
+      </div>);
+  }
+}
+
+class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      input: placeholder
+    };
+    this.editorChange = this.editorChange.bind(this);
+    this.buttonClear = this.buttonClear.bind(this);
+  }
+  
+  //setState function collecting a value from <textarea>
+  editorChange(event){
+    this.setState({ input: event.target.value});
+  }
+
+//clear out all text in input 
+  buttonClear(){
+    this.setState({input: ""})
+    
+  }
+//Editor component will receive function editorChange, and state
+//Previewer component will receive state
+  render(){
+    return( <div id="container">
+        <p className= "heading">Editor</p>
+        <p className= "heading">Previewer</p>
+        <Editor appstatechange= {this.editorChange} appinput={this.state.input}/>
+        <Previewer appinput = {this.state.input}/>
+        <div className = "buttons">
+          <button onClick= {this.buttonClear} ><i className ="fas fa-times-circle fa-3x"></i></button>
+        </div>
+        <div>
+          <button onClick= {this.buttonClear}><i className ="fas fa-times-circle fa-3x"></i></button>
+        </div>
+      </div>);
+  }
+}
+
+ReactDOM.render( <App/>,document.getElementById('root') );
+
+//using marked library 
+
+var renderer = new marked.Renderer()
+    </script>
+          
+    <div id="root"></div>
+  </body>
+</html>
