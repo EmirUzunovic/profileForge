@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Technical Documentatio Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style_doc_technical.css" />
+    <!--<script src="main.js"></script>-->
+</head>
+<body>
+<main id="main-doc">
+
+    <nav id="navbar">
+        <header>Responsive Web Design</header>
+        <ul>
+            <a class="nav-link" href="#Introduction_CSS_FlexBox"><li>Introduction CSS FlexBox</li></a>
+            <a class="nav-link" href="#FlexBox_container_properties"><li>FlexBox container properties</li></a>
+            <a class="nav-link" href="#FlexBox_child_properties"><li>FlexBox child properties</li></a>
+            <a href="#Introduction_CSS_Grid" class="nav-link"><li>Introduction CSS Grid</li></a>
+            <a class="nav-link" href="#Grid_container_properties"><li>Grid container properties</li></a>
+            <a class="nav-link" href="#Grid_child_properties"><li>Grid child properties</li></a>
+        </ul>      
+    </nav>
+    <div id="documentatio">
+    <section class="main-section" id="Introduction_CSS_FlexBox">
+        <header>Introduction CSS FlexBox</header>
+        <p>
+        CSS3 introduced Flexible Boxes, or flexbox, to create page layouts for a dynamic UI. It is a layout mode that arranges elements in a predictable way for different screen sizes and browsers.
+        </p>
+    </section>
+
+    <section class="main-section" id="FlexBox_container_properties">
+        <header>FlexBox container properties</header>  
+        <p>Placing the CSS property <code>display: flex;</code> on an element allows you to use other flex properties to build a responsive page.   
+        </p>
+        <p>Adding a flex to an element turns it into a flex container. This makes it possible to align any children of that element into rows or columns. You do this by adding the <code>flex-direction:</code> property to the parent item and setting it to row or column. Creating a row will align the children horizontally, and creating a column will align the children vertically.
+        </p>
+        <p>Values for this property are:</p>
+        <ul>
+            <li>row</li>
+            <li>column</li>
+            <li>row-reverse</li>
+            <li>column-reverse</li>
+        </ul>
+        <p>Sometimes the flex items within a flex container do not fill all the space in the container. It is common to want to tell CSS how to align and justify out the flex items a certain way. Fortunately, the <code>justify-content</code> and <code>align-items</code> propertes has several options to do this. 
+        </p>
+        <p>Values for this properties are as follows:</p>
+        <ul>
+            <li>center | flex-start | flex-end | space-between | space-around</li>
+            <li>center | flex-start | flex-end | baseline</li>
+        </ul>
+            <p>Using the <code>flex-wrap</code> property, it tells CSS to wrap items.  
+            </p>
+            <p>Values for this properties are as follows: nowrap| wrap| wrap-reverse
+            </p>
+    </section>
+
+    <section class="main-section" id="FlexBox_child_properties">
+        <header>FlexBox child properties</header> 
+        <p>The <code>flex-shrink</code> property. When it's used, it allows an item to shrink if the flex container is too small. The opposite is <code>flex-grow</code> property. The <code>flex-basis</code> property specifies the initial size of the item before CSS makes adjustments with shrinkor and grow. There is a shortcut available to set several flex properties at once. The <code>flex-grow, flex-shrink, and flex-basis</code> properties can all be set together by using the flex property. For example, <code>flex: 1 0 10px;</code> will set the item to <code>flex-grow: 1;</code> , <code>flex-shrink: 0;</code>, and <code>flex-basis: 10px;</code>. The <code>order:</code> property is used to tell CSS the order of how flex items appear in the flex container. By default, items will appear in the same order they come in the source HTML. The property takes numbers as values, and negative numbers can be used. The final property for flex items is <code>align-self</code>. This property allows you to adjust each item's alignment individually, instead of setting them all at once. The <code>align-self</code> accepts the same values as <code>align-items</code> and will override any value set by the <code>align-items</code> property.
+        </p>
+    </section>
+
+    <section class="main-section" id="Introduction_CSS_Grid">
+        <header>Introduction CSS Grid</header>
+        <p>CSS Grid helps you easily build complex web designs. It works by turning an HTML element into a grid container with rows and columns for you to place children elements where you want within the grid.
+        </p>
+    </section>
+
+    <section class="main-section" id="Grid_container_properties">
+        <header>Grid container properties</header>
+        <p>Turn any HTML element into a grid container by setting its display property to  grid <code>display: grid;</code>. This gives you the ability to use all the other properties associated with CSS Grid.
+        </p>
+        <p>To add some columns to the grid, use the <code>grid-template-columns</code> property on a grid container as demonstrated below:
+            <code>
+            .container {
+                display: grid;
+                grid-template-columns: 50px 50px;
+            }
+            </code>
+            This will give your grid two columns that are 50px wide each. The number of parameters given to the grid-template-columnsproperty indicates the number of columns in the grid, and the value of each parameter indicates the width of each column.      
+        </p>
+        <p>The grid you created will set the number of rows automatically. To adjust the rows manually, use the <code>grid-template-rows</code> property in the same way you used  <code>grid-template-column</code>.  
+        </p>
+        <p>Sometimes you want a gap in between the columns and rows. To add a gap between the columns, use the <code>grid-column-gap</code>. To add a gap between the rows, use the <code> grid-row-gap</code>. Shorthand property for <code>grid-row-gap</code> and <code>grid-column-gap</code> is <code>grid-gap</code>. If <code>grid-gap</code> has one value, it will a create a gap between all rows and columns. However, if there are two values, it will use the first one to set the gap between the rows and the second value for the columns.
+        </p>
+        <p>To align and justify items in css grid use properties <code>align-items:</code> and <code>justify-items</code>. Thise properties may have values: start | center| end.  
+        </p>
+    </section>
+
+    <section class="main-section" id="Grid_child_properties">
+        <header>Grid child properties</header>      
+        <p>To place child element within a CSS grid, use <code>grid-column:</code> property, and <code>grid-row:</code>property. 
+        </p>
+        <p>For example:
+            <code>
+                grid-column: 1/5;
+                grid-row: 1/5;
+            </code>
+            will place an item in first 5 columns and first 5 rows.
+        </p>
+        <p>The other properties for grid items is <code>align-self</code>. This property allows you to adjust each item's alignment individually, instead of setting them all at once. The<code> justfy-self</code> allows you to adjust item's justfication individually. The <code>justfy-self</code> and <code>align-self</code> accepts the same values start| center| end.
+        </p>
+    </section>
+    </div><!--end of documentatin-->    
+    </main>
+</body>
+</html>
