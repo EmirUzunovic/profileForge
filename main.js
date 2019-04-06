@@ -1,17 +1,25 @@
 //initialize materializecss
-document.addEventListener('DOMContentLoaded', function() {
-    var sidenav = document.querySelectorAll('.sidenav');
-    var sideNavInstances = M.Sidenav.init(sidenav);
-    var paralax = document.querySelectorAll('.parallax');
-    var paralaxInstances = M.Parallax.init(paralax);
-    var tabs = document.querySelectorAll('.tabs')
-    var TabsInstance = M.Tabs.init(tabs);
-    var scrollSpay = document.querySelectorAll('.scrollspy');
-    var scrollSpayInstances = M.ScrollSpy.init(scrollSpay);
-    var tooltip = document.querySelectorAll('.tooltipped');
-    var tooltipInstance = M.Tooltip.init(tooltip);
-  });
-  
+
+// Slider
+const sidenav = document.querySelectorAll('.sidenav');;
+M.Sidenav.init(sidenav);
+
+//Paralax
+const paralax = document.querySelectorAll('.parallax');
+M.Parallax.init(paralax);
+
+//Tabs
+const tabs = document.querySelectorAll('.tabs');
+M.Tabs.init(tabs);
+
+//ScrolSpy
+const scrollSpay = document.querySelectorAll('.scrollspy');
+M.ScrollSpy.init(scrollSpay);
+
+//Tooltip
+const tooltip = document.querySelectorAll('.tooltipped');
+M.Tooltip.init(tooltip); 
+
 
 filterSelection("all");
 
